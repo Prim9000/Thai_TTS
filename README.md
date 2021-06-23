@@ -1,4 +1,4 @@
-# Thai TTS Tacotron
+# Thai TTS Tacotron [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://github.com/Prim9000/Thai_TTS/blob/main/Train_TTS_Github.ipynb)
 
 Thai TTS Tacotron is the text to speech model in Thai trained by [Tacotron2](https://github.com/NVIDIA/tacotron2).
 
@@ -23,4 +23,4 @@ Pull requests are welcome. For major changes, please open an issue first to disc
 Please make sure to update tests as appropriate.
 
 ## License
-[Prim Wong](https://prim9000.medium.com/)
+Copyright © 2021 [Prim Wong](https://prim9000.medium.com/)
