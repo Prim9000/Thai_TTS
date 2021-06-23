@@ -4,7 +4,7 @@ Thai TTS Tacotron is the text to speech model in Thai trained by [Tacotron2](htt
 
 ## Installation
 
-Use the package manager [pip](https://pip.pypa.io/en/stable/) to install foobar.
+Use the package manager [pip](https://pip.pypa.io/en/stable/) to install thaitts.
 
 ```bash
 pip install thaitts
