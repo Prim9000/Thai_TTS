@@ -8,8 +8,7 @@ Model from https://github.com/NVIDIA/tacotron2, the pytorch implementation of [N
 
 
 ## Installation
-
-Use the package manager [pip](https://pip.pypa.io/en/stable/) to install thaitts.
+Use the git clone to clone the tacotron project.
 
 ```bash
 %tensorflow_version 1.x
