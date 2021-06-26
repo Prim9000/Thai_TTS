@@ -14,6 +14,13 @@ Use the package manager [pip](https://pip.pypa.io/en/stable/) to install thaitts
 ```bash
 pip install thaitts
 ```
+## Training
+
+## Training using pre-trained (warm-start)
+
+Training using a pre-trained model can lead to faster convergence
+
+By default, the dataset dependent text embedding layers are ignored.
 
 ## Usage
 
@@ -26,3 +33,13 @@ voice = thaitts.synthesis('สวัสดี') # returns the wav file of synthe
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
 Please make sure to update tests as appropriate.
+
+## References and Related repos
+[WaveGlow](https://github.com/NVIDIA/WaveGlow) Faster than real time Flow-based Generative Network for Speech Synthesis
+
+[nv-wavenet](https://github.com/NVIDIA/nv-wavenet/) Faster than real time WaveNet.
+
+[Tacotron 2](https://github.com/NVIDIA/tacotron2), the official repository implementation with Pytorch.
+
+## Medium
+Coming Soon
