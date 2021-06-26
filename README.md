@@ -14,13 +14,25 @@ Use the package manager [pip](https://pip.pypa.io/en/stable/) to install thaitts
 ```bash
 pip install thaitts
 ```
-## Training
+## Training [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Prim9000/Thai_TTS/blob/main/Train_TTS_Github.ipynb)
+
+Parameters tuning and recheck your training files:
+
+![image](https://user-images.githubusercontent.com/65888725/123502176-7278c580-d674-11eb-9038-bffc2f855f56.png)
+
+1. ```train.py --output_directory=outdir --log_directory=logdir```
+2. (OPTIONAL) ```tensorboard --logdir=outdir/logdir```
+
 
 ## Training using pre-trained (warm-start)
 
 Training using a pre-trained model can lead to faster convergence
 
-By default, the dataset dependent text embedding layers are ignored.
+By default, the dataset dependent text embedding layers are [ignored](https://github.com/Prim9000/tacotron2/blob/master/hparams.py#L22).
+
+```bash 
+python train.py --output_directory=outdir --log_directory=logdir -c tacotron2_statedict.pt --warm_start
+```
 
 ## Usage
 
