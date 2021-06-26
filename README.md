@@ -12,7 +12,24 @@ Model from https://github.com/NVIDIA/tacotron2, the pytorch implementation of [N
 Use the package manager [pip](https://pip.pypa.io/en/stable/) to install thaitts.
 
 ```bash
-pip install thaitts
+%tensorflow_version 1.x
+import os
+from os.path import exists, join, basename, splitext
+git_repo_url = 'https://github.com/Prim9000/tacotron2.git'
+project_name = splitext(basename(git_repo_url))[0]
+if not exists(project_name):
+  # clone and install
+  !git clone -q --recursive {git_repo_url}
+  !cd {project_name}/waveglow && git checkout 9168aea
+  !pip install -q librosa unidecode
+  
+import sys
+sys.path.append(join(project_name, 'waveglow/'))
+sys.path.append(project_name)
+import time
+import matplotlib
+import matplotlib.pylab as plt
+plt.rcParams["axes.grid"] = False
 ```
 ## Training [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Prim9000/Thai_TTS/blob/main/Train_TTS_Github.ipynb)
 
@@ -34,11 +51,28 @@ By default, the dataset dependent text embedding layers are [ignored](https://gi
 python train.py --output_directory=outdir --log_directory=logdir -c tacotron2_statedict.pt --warm_start
 ```
 
-## Usage
+## Synthesizing Text
 
 ```python
-import thaitts
-voice = thaitts.synthesis('สวัสดี') # returns the wav file of synthesized speech
+checkpoint_path = "checkpoint_path/checkpoint" # your model's checkpoint path
+model = load_model(hparams)
+model.load_state_dict(torch.load(checkpoint_path)['state_dict'])
+_ = model.cuda().eval().half()
+
+text = "สวัสดี ยินดีต้อนรับ สู่ ระบบ สังเคราะห์ เสียง" #change input text here
+
+sequence = np.array(text_to_sequence(text, ['english_cleaners']))[None, :]
+sequence = torch.autograd.Variable(
+    torch.from_numpy(sequence)).cuda().long()
+    
+mel_outputs, mel_outputs_postnet, _, alignments = model.inference(sequence)
+plot_data((mel_outputs.float().data.cpu().numpy()[0],
+           mel_outputs_postnet.float().data.cpu().numpy()[0],
+           alignments.float().data.cpu().numpy()[0].T))
+           
+with torch.no_grad():
+    audio = waveglow.infer(mel_outputs_postnet, sigma=0.666)
+ipd.Audio(audio[0].data.cpu().numpy(), rate=hparams.sampling_rate)
 ```
 
 ## Contributing
