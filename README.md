@@ -58,7 +58,7 @@ model = load_model(hparams)
 model.load_state_dict(torch.load(checkpoint_path)['state_dict'])
 _ = model.cuda().eval().half()
 
-text = "สวัสดี ยินดีต้อนรับ สู่ ระบบ สังเคราะห์ เสียง" #change input text here
+text = "ยินดีที่ได้รู้จัก นี่คือเสียงจากปัญญาประดิษฐ์" #change input text here
 
 sequence = np.array(text_to_sequence(text, ['english_cleaners']))[None, :]
 sequence = torch.autograd.Variable(
