@@ -87,4 +87,4 @@ Please make sure to update tests as appropriate.
 [Tacotron 2](https://github.com/NVIDIA/tacotron2), the official repository implementation with Pytorch.
 
 ## Medium
-Coming Soon
+[Lifelike Speech Synthesis | Thai Text To Speech with Tacotron2](https://prim9000.medium.com/lifelike-speech-synthesis-thai-text-to-speech-with-tacotron2-24460af0b33e)
