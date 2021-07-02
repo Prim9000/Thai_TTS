@@ -30,7 +30,7 @@ import matplotlib
 import matplotlib.pylab as plt
 plt.rcParams["axes.grid"] = False
 ```
-## Training [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Prim9000/Thai_TTS/blob/main/Train_TTS_Github.ipynb)
+## Training [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Prim9000/Thai_TTS/blob/main/Thai_TTS_Training.ipynb#scrollTo=zg6ehSxdHxPU)
 
 Parameters tuning and recheck your training files:
 
