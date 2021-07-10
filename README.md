@@ -1,5 +1,4 @@
-# Thai TTS Tacotron [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Prim9000/Thai_TTS/blob/main/Thai_TTS_Inference.ipynb?hl=en) [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0) [![DOI](https://zenodo.org/badge/373199023.svg)](https://zenodo.org/badge/latestdoi/373199023)
-
+# Thai TTS Tacotron [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Prim9000/Thai_TTS/blob/main/Thai_TTS_Inference.ipynb?hl=en) [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0) [![DOI](https://zenodo.org/badge/379571368.svg)](https://zenodo.org/badge/latestdoi/379571368)
 Thai TTS Tacotron is the text to speech model in Thai trained by [Tacotron2](https://github.com/NVIDIA/tacotron2).
 
 Model from https://github.com/NVIDIA/tacotron2, the pytorch implementation of [Natural TTS Synthesis By Conditioning Wavenet On Mel Spectrogram Predictions](https://arxiv.org/abs/1712.05884) and training with [TSynC2_Nun Dataset](https://aiforthai.in.th/corpus.php).
