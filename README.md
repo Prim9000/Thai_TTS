@@ -49,7 +49,7 @@ By default, the dataset dependent text embedding layers are [ignored](https://gi
 python train.py --output_directory=outdir --log_directory=logdir -c tacotron2_statedict.pt --warm_start
 ```
 
-## Synthesizing Text
+## Synthesizing Text  [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Prim9000/Thai_TTS/blob/main/Thai_TTS_Inference.ipynb#scrollTo=eLPNYICTS9v-)
 
 ```python
 checkpoint_path = "checkpoint_path/checkpoint" # your model's checkpoint path
